@@ -11,6 +11,7 @@
 #include "mcal_init.h"
 #include "hal_motor.h"
 #include "hal_servo.h"
+#include "rte.h"
 T_U8 counter=0;
 T_U8 a=60;
 
@@ -24,12 +25,12 @@ void TASK_Inits()
 }
 void TASK_1ms()
 {
-
+	
 }
 
 void TASK_5ms()
 {
-
+	RTE_Task1ms();
 }
 
 void TASK_10ms()
@@ -39,18 +40,6 @@ void TASK_10ms()
 
 void TASK_100ms()
 { 
-	/* from hal_motor
-    increaseDutyCycle();
-	*/
-	vSetMotorDir(FWD);
-	vSetMotorSpeed( 70);
-	counter++;
-	
-	if((counter %5)==0)
-		{
-			vSetAngle(a);
-			a=a+10;
-		}
 
 
 }

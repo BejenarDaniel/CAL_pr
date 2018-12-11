@@ -18,3 +18,4 @@ void vSetMotorDirSpeed(T_U8 u8Dir,T_U8 u8Speed);
 
 
 #endif /* HAL_MOTOR_H */
+
