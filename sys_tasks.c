@@ -12,8 +12,10 @@
 #include "hal_motor.h"
 #include "hal_servo.h"
 #include "rte.h"
+#include "hal_battery.h"
 T_U8 counter=0;
 T_U8 a=60;
+T_U16 x;
 
 void TASK_Inits()
 {
@@ -30,7 +32,8 @@ void TASK_1ms()
 
 void TASK_5ms()
 {
-	RTE_Task1ms();
+	x = BatLvl();
+    
 }
 
 void TASK_10ms()
